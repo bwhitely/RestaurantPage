@@ -33,7 +33,7 @@ export function blurbComponent() {
     const element = document.createElement('div');
     element.classList.add('blurb')
 
-    const paragraph = document.createElement('p')
+    const paragraph = document.createElement('h3')
     paragraph.id = "blurb"
     paragraph.innerHTML = "Benny's Greek is the premier Greek restaurant in Adelaide.<br>Suitable for all ages."
 
@@ -48,20 +48,24 @@ export function navComponent() {
     element.id = "navbar"
 
     const nav = document.createElement("ul")
+
     // nav elements
     const home = document.createElement("li")
+    home.classList.add("navbar-item")
     const homeLink = document.createElement('a')
     home.id = "home"
     homeLink.innerHTML = "Home"
     home.appendChild(homeLink)
 
     const contact = document.createElement('li')
+    contact.classList.add("navbar-item")
     const contactLink = document.createElement('a')
     contact.id = "contact"
     contactLink.innerHTML = "Contact"
     contact.appendChild(contactLink)
 
     const menu = document.createElement('li')
+    menu.classList.add("navbar-item")
     const menuLink = document.createElement('a')
     menu.id = "menu"
     menuLink.innerHTML = "Menu"
@@ -73,4 +77,60 @@ export function navComponent() {
     element.appendChild(nav)
 
     return element
+}
+
+export function hoursComponent() {
+    const element = document.createElement('div')
+    element.classList.add("hours-container")
+
+    const hoursHeader = document.createElement('h3')
+    hoursHeader.innerHTML = "Hours"
+    hoursHeader.style.textAlign = 'center'
+
+    const hoursList = document.createElement('ul')
+    hoursList.classList.add("hours-list")
+
+    const sunday = document.createElement("li")
+    sunday.innerHTML = "Sunday : 8am - 8pm"
+    const monday = document.createElement('li')
+    monday.innerHTML = "Monday : 8am - 8pm"
+    const tuesday = document.createElement('li')
+    tuesday.innerHTML = "Tuesday : 8am - 8pm"
+    const wednesday = document.createElement('li')
+    wednesday.innerHTML = "Wednesday : 8am - 8pm"
+    const thursday = document.createElement('li')
+    thursday.innerHTML = "Thursday : 8am - 8pm"
+    const friday = document.createElement('li')
+    friday.innerHTML = "Friday : 8am - 8pm"
+    const saturday = document.createElement('li')
+    saturday.innerHTML = "Saturday : 8am - 8pm"
+
+    hoursList.appendChild(sunday)
+    hoursList.appendChild(monday)
+    hoursList.appendChild(tuesday)
+    hoursList.appendChild(wednesday)
+    hoursList.appendChild(thursday)
+    hoursList.appendChild(friday)
+    hoursList.appendChild(saturday)
+
+    element.appendChild(hoursHeader)
+    element.appendChild(hoursList)
+
+    return element;
+}
+
+export function locationComponent() {
+    const element = document.createElement('div')
+    element.classList.add("location-container")
+
+    const header = document.createElement('h3')
+    header.innerHTML = "Location"
+
+    const location = document.createElement('p')
+    location.innerHTML = "123 Real Street, Adelaide, 5069"
+
+    element.appendChild(header)
+    element.appendChild(location)
+
+    return element;
 }

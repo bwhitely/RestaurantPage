@@ -1,7 +1,8 @@
 import './style.css'
 import Icon from './logo.png'
-import { titleComponent, iconComponent, blurbComponent, navComponent } from './homePage.js'
+import { titleComponent, iconComponent, blurbComponent, navComponent, hoursComponent, locationComponent } from './homePage.js'
 import { contactComponent, contactsComponent } from './contactPage.js'
+import { menuItem, menuComponent } from './menuPage.js'
 
 window.onload = function () {
     const content = document.getElementById("content");
@@ -31,7 +32,7 @@ function changePage(page) {
         loadContactPage()
     }
     else if (page === "menu") {
-        console.log(page)
+        loadMenuPage()
     }
 }
 
@@ -41,6 +42,8 @@ function loadHomePage() {
     content.appendChild(titleComponent())
     content.appendChild(iconComponent())
     content.appendChild(blurbComponent())
+    content.appendChild(hoursComponent())
+    content.appendChild(locationComponent())
 }
 
 function loadContactPage() {
@@ -53,5 +56,7 @@ function loadContactPage() {
 }
 
 function loadMenuPage() {
+    const content = document.getElementById('content')
 
+    content.appendChild(menuComponent())
 }

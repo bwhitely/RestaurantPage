@@ -26,13 +26,13 @@
     width: 1000px;
 }
 
-li {
+.navbar-item {
     display: inline;
     float: left;
     margin: 15px;
 }
 
-li a {
+.navbar-item a {
     display: block;
     color: white;
     text-align: center;
@@ -40,6 +40,40 @@ li a {
     text-decoration: none;
 }
 
-li a:hover{
+.navbar-item a:hover{
     background-color: #111;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu-header {
+    border: 1px solid black;
+}
+
+.subheading-container {
+    border: 1px solid black;
+}
+
+.hours-list {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.contactHeader {
+    text-align: center;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.location-container {
+    text-align: center;
 }
